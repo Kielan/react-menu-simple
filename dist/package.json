@@ -1,0 +1,44 @@
+{
+  "name": "react-menu",
+  "version": "0.0.7",
+  "description": "Accessible menu component for React.JS",
+  "main": "dist/lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/instructure-react/react-menu.git"
+  },
+  "homepage": "https://github.com/instructure-react/react-menu",
+  "bugs": "https://github.com/instructure-react/react-menu/issues",
+  "directories": {
+    "example": "examples"
+  },
+  "authors": [
+    "Jason Madsen"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.13.0"
+  },
+  "tags": [
+    "react",
+    "menu",
+    "dropdown"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "menu",
+    "dropdown"
+  ],
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "js-stylesheet": "0.0.1"
+  }
+}

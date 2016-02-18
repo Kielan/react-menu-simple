@@ -1,0 +1,67 @@
+{
+  "name": "react-menu-simple",
+  "version": "0.0.8",
+  "description": "Accessible menu component for React.JS by jason but now supporting multiple module systems thanks to jeffkole(Jeff Kolesky), really wished he had merged the branch. All credit goes to them I just want this to be an accessible component in the react/redux ecosystem",
+  "main": "./dist/lib/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kielan/react-menu-simple.git"
+  },
+  "homepage": "https://github.com/instructure-react/react-menu",
+  "bugs": "https://github.com/kielan/react-menu-simple/issues",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "scripts/test --browsers Chrome --single-run",
+    "start": "scripts/dev-examples"
+  },
+  "authors": [
+    "Jason Madsen, Jeff Kolesky"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "4.2.3",
+    "browserify-shim": "3.6.0",
+    "envify": "1.2.0",
+    "expect": "0.1.1",
+    "jsx-loader": "0.11.2",
+    "karma": "0.12.16",
+    "karma-browserify": "^0.2.1",
+    "karma-chrome-launcher": "0.1.4",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "0.1.3",
+    "karma-mocha": "0.1.3",
+    "mocha": "1.20.1",
+    "react": "^0.13.0",
+    "reactify": "^0.14.0",
+    "rf-release": "0.3.1",
+    "uglify-js": "2.4.15",
+    "webpack-dev-server": "1.6.5"
+  },
+  "peerDependencies": {
+    "react": "^0.13.0"
+  },
+  "tags": [
+    "react",
+    "menu",
+    "dropdown"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "menu",
+    "dropdown"
+  ],
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "dependencies": {
+    "js-stylesheet": "0.0.1"
+  }
+}
