@@ -2,7 +2,7 @@
   "name": "react-menu-simple",
   "version": "0.0.9",
   "description": "Accessible menu component for React.JS by jason but now supporting multiple module systems thanks to jeffkole(Jeff Kolesky), really wished he had merged the branch. All credit goes to them I just want this to be an accessible component in the react/redux ecosystem",
-  "main": "./dist/umd/react-menu.js",
+  "main": "./dist/lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kielan/react-menu-simple.git"
