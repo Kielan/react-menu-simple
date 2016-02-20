@@ -2,10 +2,10 @@
 
 var React = require('react');
 var MenuOption = require('./MenuOption');
-var cloneWithProps = require('react/lib/cloneWithProps')
+var cloneWithProps = React.cloneElement;
 var buildClassName = require('../mixins/buildClassName');
 
-var MenuOptions = module.exports = React.createClass({displayName: 'exports',
+var MenuOptions = module.exports = React.createClass({displayName: 'MenuOptions',
 
   contextTypes: {
     id: React.PropTypes.string,

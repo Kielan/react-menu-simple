@@ -3,7 +3,7 @@
 var React = require('react');
 var buildClassName = require('../mixins/buildClassName');
 
-var MenuTrigger = module.exports = React.createClass({displayName: 'exports',
+var MenuTrigger = module.exports = React.createClass({displayName: 'MenuTrigger',
 
   contextTypes: {
     id: React.PropTypes.string,

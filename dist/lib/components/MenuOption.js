@@ -3,7 +3,7 @@
 var React = require('react');
 var buildClassName = require('../mixins/buildClassName');
 
-var MenuOption = module.exports = React.createClass({displayName: 'exports',
+var MenuOption = module.exports = React.createClass({displayName: 'MenuOption',
 
   propTypes: {
     active: React.PropTypes.bool,
