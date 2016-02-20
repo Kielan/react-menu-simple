@@ -1,6 +1,8 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var ReactDOM = require('react-dom');
+
 var MenuOption = require('./MenuOption');
 var cloneWithProps = React.cloneElement;
 var buildClassName = require('../mixins/buildClassName');
@@ -21,7 +23,6 @@ var MenuOptions = module.exports = React.createClass({displayName: 'MenuOptions'
   onSelectionMade: function() {
     this.props.onSelectionMade();
   },
-
 
   moveSelectionUp: function() {
     this.updateFocusIndexBy(-1);
@@ -52,23 +53,23 @@ var MenuOptions = module.exports = React.createClass({displayName: 'MenuOptions'
   },
 
   focusOption: function(index) {
-    this.selectedIndex = index;
-    this.updateFocusIndexBy(0);
+      this.selectedIndex = index;
+      this.updateFocusIndexBy(0);
   },
 
   updateFocusIndexBy: function(delta) {
-    var optionNodes = this.getDOMNode().querySelectorAll('.Menu__MenuOption');
-    this.normalizeSelectedBy(delta, optionNodes.length);
-    this.setState({activeIndex: this.selectedIndex}, function () {
-      optionNodes[this.selectedIndex].focus();
-    });
+      var optionNodes = ReactDOM.findDOMNode(this);
+      this.normalizeSelectedBy(delta, optionNodes.getElementsByClassName('Menu__MenuOption').length);
+      this.setState({activeIndex: this.selectedIndex}, function () {
+	  //optionNodes[this.selectedIndex].focus();
+      });
   },
 
   renderOptions: function() {
     var index = 0;
     return React.Children.map(this.props.children, function(c){
-      var clonedOption = c;
-      if (c.type === MenuOption.type) {
+	var clonedOption = c;
+      if (c.type.displayName === 'MenuOption') {
         var active = this.state.activeIndex === index;
         clonedOption = cloneWithProps(c, {
           active: active,

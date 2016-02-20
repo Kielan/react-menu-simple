@@ -65,17 +65,17 @@ var MenuOption = module.exports = React.createClass({displayName: 'MenuOption',
 
   render: function() {
     return (
-      React.DOM.div({
-        onClick: this.handleClick, 
-        onKeyUp: this.handleKeyUp, 
-        onKeyDown: this.handleKeyDown, 
-        onMouseOver: this.handleHover, 
-        className: this.buildName(), 
-        role: "menuitem", 
-        tabIndex: "-1", 
-        'aria-disabled': this.props.disabled
-      }, 
-        this.props.children
+	React.DOM.div({
+            onClick: this.handleClick, 
+            onKeyUp: this.handleKeyUp, 
+            onKeyDown: this.handleKeyDown, 
+            onMouseOver: this.handleHover, 
+            className: this.buildName(), 
+            role: "menuitem", 
+            tabIndex: "-1", 
+            'aria-disabled': this.props.disabled
+	}, 
+		      this.props.children
       )
     )
   }
