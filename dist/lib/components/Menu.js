@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 var cloneWithProps = React.cloneElement;
 var MenuTrigger = require('./MenuTrigger');
@@ -47,13 +48,13 @@ var Menu = module.exports = React.createClass({
     },
 
     focusTrigger: function() {
-	this.refs.trigger.getDOMNode().focus();
+	ReactDOM.findDOMNode(this.refs.trigger).focus();
     },
 
     handleBlur: function(e) {
 	// give next element a tick to take focus
 	setTimeout(function() {
-	    if (!this.getDOMNode().contains(document.activeElement) && this.state.active){
+	    if (!ReactDOM.findDOMNode(this).contains(document.activeElement) && this.state.active){
 		this.closeMenu();
 	    }
 	}.bind(this), 1);
@@ -71,8 +72,9 @@ var Menu = module.exports = React.createClass({
     },
 
     updatePositioning: function() {
-	var triggerRect = this.refs.trigger.getDOMNode().getBoundingClientRect();
-	var optionsRect = this.refs.options.getDOMNode().getBoundingClientRect();
+//this.refs.trigger.getDOMNode()
+	var triggerRect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+	var optionsRect = ReactDOM.findDOMNode(this).getBoundingClientRect();
 	var positionState = {};
 	// horizontal = left if it wont fit on left side
 	if (triggerRect.left + optionsRect.width > window.innerWidth) {
