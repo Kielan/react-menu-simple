@@ -1,4 +1,4 @@
-# react-menu
+# react-menu-simple
 
 An accessible menu component built for React.JS
 
