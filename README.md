@@ -1,5 +1,4 @@
 # react-menu
-#Warning do not use this yet hope to be stabel in a few days. I am fixing up for newer versions of react and using for es6 babel
 
 An accessible menu component built for React.JS
 
@@ -17,9 +16,9 @@ var MenuTrigger = Menu.MenuTrigger;
 var MenuOptions = Menu.MenuOptions;
 var MenuOption = Menu.MenuOption;
 
-var App = React.createClass({
+class App extends React.Component {
 
-  render: function() {
+  render function() {
     return (
       <Menu className='myMenu'>
         <MenuTrigger>
@@ -47,7 +46,7 @@ var App = React.createClass({
       </Menu>
     );
   }
-});
+};
 
 React.renderComponent(<App />, document.body);
 
